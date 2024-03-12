@@ -13,7 +13,7 @@ env:
   PIPELINE_USER_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   PIPELINE_USER_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   SAM_TEMPLATE: template.yaml
-  TESTING_STACK_NAME: aave_pos
+  TESTING_STACK_NAME: aave-pos
   TESTING_PIPELINE_EXECUTION_ROLE: arn:aws:iam::730335421807:role/aws-sam-cli-managed-dev-pipel-PipelineExecutionRole-WiGwB03lEeSh
   TESTING_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::730335421807:role/aws-sam-cli-managed-dev-p-CloudFormationExecutionRo-ilSdtq7aUAl2
   TESTING_ARTIFACTS_BUCKET: aws-sam-cli-managed-dev-pipeline-r-artifactsbucket-ewpprsb4o5zc
@@ -22,7 +22,7 @@ env:
   # testing "sam package" and "sam deploy" commands.
   # TESTING_IMAGE_REPOSITORY = '0123456789.dkr.ecr.region.amazonaws.com/repository-name'
   TESTING_REGION: us-east-1
-  PROD_STACK_NAME: aave_pos
+  PROD_STACK_NAME: aave-pos-prod
   PROD_PIPELINE_EXECUTION_ROLE: arn:aws:iam::730335421807:role/aws-sam-cli-managed-prod-pipe-PipelineExecutionRole-j35GBnzyxlTU
   PROD_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::730335421807:role/aws-sam-cli-managed-prod--CloudFormationExecutionRo-ljRn39hTcK4Q
   PROD_ARTIFACTS_BUCKET: aws-sam-cli-managed-prod-pipeline--artifactsbucket-ybseukz2ehqr

@@ -1,9 +1,9 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: >
-  aave_pos
+  aave-pos
 
-  Sample SAM Template for aave_pos
+  Sample SAM Template for aave-pos
 
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
@@ -18,7 +18,7 @@ Resources:
   AavePosFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
-      CodeUri: aave_pos/
+      CodeUri: aave-pos/
       Handler: app.lambda_handler
       Runtime: python3.9
       Architectures:

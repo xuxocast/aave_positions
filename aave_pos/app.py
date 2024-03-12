@@ -21,7 +21,10 @@ def lambda_handler(event, context):
         "statusCode": 200,
         "body": json.dumps({
             "message": "successo",
-            "Balance": round(totalBal,4)
-            "Matic bal": round(totalBal/mp,4)
+            "Balance": round(totalBal,4),
+            "Matic bal": round(totalBal/mp,4),
         }),
     }
+
+if __name__ == "__main__":
+    print(lambda_handler('',''))

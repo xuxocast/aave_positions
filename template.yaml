@@ -15,7 +15,7 @@ Globals:
     LoggingConfig:
       LogFormat: JSON
 Resources:
-  HelloWorldFunction:
+  AavePosFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
       CodeUri: aave_pos/
@@ -47,12 +47,12 @@ Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
   # Find out more about other implicit resources you can reference within SAM
   # https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api
-  HelloWorldApi:
+  AavePosApi:
     Description: API Gateway endpoint URL for Prod stage for AavePos function
     Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/aave/"
-  HelloWorldFunction:
+  AavePosFunction:
     Description: Aave Pos Lambda Function ARN
     Value: !GetAtt AavePosFunction.Arn
-  HelloWorldFunctionIamRole:
-    Description: Implicit IAM Role created for Hello World function
+  AavePosFunctionIamRole:
+    Description: Implicit IAM Role created for AavePos function
     Value: !GetAtt AavePosFunctionRole.Arn
